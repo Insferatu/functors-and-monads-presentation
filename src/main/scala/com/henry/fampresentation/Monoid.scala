@@ -16,14 +16,14 @@ object Monoid {
 
 object MonoidInstances {
   implicit val stringMonoid: Monoid[String] = new Monoid[String] {
-    def append(l: String, r: String): String = l.concat(r)
+    override def append(l: String, r: String): String = l.concat(r)
 
-    def empty: String = ""
+    override def empty: String = ""
   }
 
   implicit val intMonoid: Monoid[Int] = new Monoid[Int] {
-    def append(l: Int, r: Int): Int = l + r
+    override def append(l: Int, r: Int): Int = l + r
 
-    def empty: Int = 0
+    override def empty: Int = 0
   }
 }
