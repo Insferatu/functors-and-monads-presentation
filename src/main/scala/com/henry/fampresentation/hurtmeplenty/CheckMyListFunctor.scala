@@ -1,6 +1,6 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.hurtmeplenty
 
-import com.henry.fampresentation.model.{MyCons, MyList, MyNil}
+import com.henry.fampresentation.hurtmeplenty.model.{MyCons, MyList, MyNil}
 
 object CheckMyListFunctor {
   object FunctorInstances {

@@ -1,4 +1,4 @@
-package com.henry.fampresentation.model
+package com.henry.fampresentation.hurtmeplenty.model
 
 sealed trait MyList[+T]
 case class MyCons[T](h: T, t: MyList[T]) extends MyList[T]

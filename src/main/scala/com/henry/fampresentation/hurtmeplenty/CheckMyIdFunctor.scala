@@ -1,6 +1,6 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.hurtmeplenty
 
-import com.henry.fampresentation.model.MyId
+import com.henry.fampresentation.hurtmeplenty.model.MyId
 
 object CheckMyIdFunctor {
   object FunctorInstances {

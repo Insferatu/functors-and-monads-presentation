@@ -1,4 +1,4 @@
-package com.henry.fampresentation.model
+package com.henry.fampresentation.hurtmeplenty.model
 
 sealed trait MyOption[+T]
 case class MySome[T](t: T) extends MyOption[T]

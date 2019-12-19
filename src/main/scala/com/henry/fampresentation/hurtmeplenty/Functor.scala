@@ -1,4 +1,4 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.hurtmeplenty
 
 trait Functor[F[_]] {
   def map[A, B](fa: F[A])(f: A => B): F[B]

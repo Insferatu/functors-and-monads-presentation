@@ -1,6 +1,6 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.bringiton
 
-import com.henry.fampresentation.model.MyId
+import com.henry.fampresentation.hurtmeplenty.model.MyId
 
 object CheckMyIdMonad {
   object MonadInstances {
@@ -14,15 +14,14 @@ object CheckMyIdMonad {
   }
 
   def main(args: Array[String]): Unit = {
-    import Monad._
     import MonadInstances._
 
     val i1 = Monad[MyId].pure(5)
     val i2 = Monad[MyId].pure("hello")
     val i3 = Monad[MyId].pure(false)
 
-    println(i1.flatMap(i => MyId(i + 10)))
-    println(i2.flatMap(i => MyId(i.reverse)))
-    println(i3.flatMap(i => MyId(i && true)))
+    println(Monad[MyId].flatMap(i1)(i => MyId(i + 10)))
+    println(Monad[MyId].flatMap(i2)(i => MyId(i.reverse)))
+    println(Monad[MyId].flatMap(i3)(i => MyId(i && true)))
   }
 }

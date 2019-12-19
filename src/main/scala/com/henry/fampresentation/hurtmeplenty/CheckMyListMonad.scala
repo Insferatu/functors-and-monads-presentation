@@ -1,7 +1,7 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.hurtmeplenty
 
-import com.henry.fampresentation.model.MyList.concat
-import com.henry.fampresentation.model.{MyCons, MyList, MyNil}
+import com.henry.fampresentation.hurtmeplenty.model.{MyCons, MyList, MyNil}
+import com.henry.fampresentation.hurtmeplenty.model.MyList.concat
 
 object CheckMyListMonad {
   object MonadInstances {

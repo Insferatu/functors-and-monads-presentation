@@ -1,4 +1,4 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.hurtmeplenty
 
 trait ContraFunctor[F[_]] {
   def contramap[A, B](fa: F[B])(f: A => B): F[A]

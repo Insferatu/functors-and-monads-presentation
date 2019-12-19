@@ -1,6 +1,6 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.bringiton
 
-import com.henry.fampresentation.model.{MyNone, MyOption, MySome}
+import com.henry.fampresentation.hurtmeplenty.model.{MyNone, MyOption, MySome}
 
 object CheckMyOptionMonad {
   object MonadInstances {
@@ -19,15 +19,14 @@ object CheckMyOptionMonad {
     }
   }
   def main(args: Array[String]): Unit = {
-    import Monad._
     import MonadInstances._
 
     val s1: MyOption[Int] = Monad[MyOption].pure(5)
     val s2: MyOption[String] = Monad[MyOption].pure("hello")
     val s3: MyOption[Boolean] = MyNone
 
-    println(s1.flatMap(i => MySome(i + 10)))
-    println(s2.flatMap(i => MySome(i.reverse)))
-    println(s3.flatMap(i => MySome(i && true)))
+    println(Monad[MyOption].flatMap(s1)(i => MySome(i + 10)))
+    println(Monad[MyOption].flatMap(s2)(i => MySome(i.reverse)))
+    println(Monad[MyOption].flatMap(s3)(i => MySome(i && true)))
   }
 }

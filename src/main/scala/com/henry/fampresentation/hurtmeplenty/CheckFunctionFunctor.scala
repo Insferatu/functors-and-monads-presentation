@@ -1,4 +1,4 @@
-package com.henry.fampresentation
+package com.henry.fampresentation.hurtmeplenty
 
 object CheckFunctionFunctor {
   object FunctorInstances {
