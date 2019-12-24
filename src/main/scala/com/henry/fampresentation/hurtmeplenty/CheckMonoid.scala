@@ -3,13 +3,13 @@ package com.henry.fampresentation.hurtmeplenty
 object CheckMonoid {
   object MonoidInstances {
     implicit val stringMonoid: Monoid[String] = new Monoid[String] {
-      override def append(l: String, r: String): String = l.concat(r)
+      override def combine(l: String, r: String): String = l.concat(r)
 
       override def empty: String = ""
     }
 
     implicit val intMonoid: Monoid[Int] = new Monoid[Int] {
-      override def append(l: Int, r: Int): Int = l + r
+      override def combine(l: Int, r: Int): Int = l + r
 
       override def empty: Int = 0
     }
@@ -34,5 +34,5 @@ object CheckMonoid {
     println(collapse(intList))
   }
 
-  def collapse[T: Monoid](list: List[T]): T = list.foldLeft(Monoid[T].empty)(Monoid[T].append)
+  def collapse[T: Monoid](list: List[T]): T = list.foldLeft(Monoid[T].empty)(Monoid[T].combine)
 }
